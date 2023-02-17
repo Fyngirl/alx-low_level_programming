@@ -1,9 +1,13 @@
+/*
+ * File: 101-quote.c
+ * Auth: Ibiere
+ */
 #include <stdio.h>
 #include <unistd.h>
 /**
- * main- Entry point
- * Description - 'The programm prints a new line into standard error'
- * Return- Always 1 (success)
+ * main -  Prints "and that piece of art is useful" - Dora Korpar, 2015-10-19,
+ *followed by a new line, to the standard error.
+ * Return: Always 1.
  */
 int main(void)
 {
