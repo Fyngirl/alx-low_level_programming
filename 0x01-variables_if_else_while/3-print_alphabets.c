@@ -5,8 +5,8 @@
  */
 int main(void)
 {
-char alphabet = 'a';
-while (alphabet <= 'Z')
+char alphabet = 'a' 'A';
+while (alphabet <= 'z','Z')
 {
 	putchar(alphabet);
 	alphabet++;
