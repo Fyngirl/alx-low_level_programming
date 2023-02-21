@@ -30,7 +30,7 @@ int main(void)
 	{
 		elf1 = fib1_elf1 + fib2_elf1;
 		elf2 = fib1_elf2 + fib2_elf2;
-		if (fib1_elf2 + fib2_elf2 > 9999999999)
+		if ((fib1_elf2 + fib2_elf2) > 9999999999)
 		{
 			elf1 += 1;
 			elf2 %= 10000000000;
