@@ -7,43 +7,43 @@
 
 int main(void)
 {
-	int count;
-	unsigned long fib1 = 0, fib2 = 1, sum;
-	unsigned long fib1_elf1, fib1_elf2, fib2_elf1, fib2_elf2;
-	unsigned long elf1, elf2;
+	int x;
+	unsigned long f1 = 0, f2 = 1, s;
+	unsigned long f1_l1, f1_l2, f2_l1, f2_l2;
+	unsigned long l1, l2;
 
-	for (count = 0; count < 92; count++)
+	for (x = 0; x < 92; x++)
 	{
-		sum = fib1 + fib2;
-		printf("%lu, ", sum);
+		s = f1 + f2;
+		printf("%lu, ", s);
 
-		fib1 = fib2;
-		fib2 = sum;
+		f1 = f2;
+		f2 = s;
 	}
 
-	fib1_elf1 = fib1 / 10000000000;
-	fib2_elf1 = fib2 / 10000000000;
-	fib1_elf2 = fib1 % 10000000000;
-	fib1_elf2 = fib2 % 10000000000;
+	f1_l1 = f1 / 1000000000;
+	f2_l1 = f2 / 1000000000;
+	f1_l2 = f1 % 1000000000;
+	f1_l2 = f2 % 1000000000;
 
-	for (count = 93; count < 99; count++)
+	for (x = 93; x < 99; x++)
 	{
-		elf1 = fib1_elf1 + fib2_elf1;
-		elf2 = fib1_elf2 + fib2_elf2;
-		if ((fib1_elf2 + fib2_elf2) > 9999999999)
+		l1 = f1_l1 + f2_l1;
+		l2 = f1_l2 + f2_l2;
+		if ((f1_l2 + f2_l2) > 999999999)
 		{
-			elf1 += 1;
-			elf2 %= 10000000000;
+			l1 += 1;
+			l2 %= 1000000000;
 		}
 
-		printf("%lu%lu", elf1, elf2);
-		if (count != 98)
+		printf("%lu%lu", l1, l2);
+		if (x != 98)
 			printf(", ");
 
-		fib1_elf1 = fib2_elf1;
-		fib1_elf2 = fib2_elf2;
-		fib2_elf1 = elf1;
-		fib2_elf2 = elf2;
+		f1_l1 = f2_l1;
+		f1_l2 = f2_l2;
+		f2_l1 = l1;
+		f2_l2 = l2;
 	}
 	printf("\n");
 	return (0);
