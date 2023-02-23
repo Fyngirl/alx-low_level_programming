@@ -2,7 +2,6 @@
 
 /**
  * print_most_numbers - A function that prints num 0-9 but skips 2 and 4
- * @i: integer value
  */
 
 void print_most_numbers(void)
