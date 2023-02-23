@@ -9,7 +9,7 @@ void print_line(int n)
 {
 	int length;
 
-	for (int n = 0; n < length; n++)
+	for (n = 0; n < length; n++)
 	{
 		_putchar('-');
 	}
