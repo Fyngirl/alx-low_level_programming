@@ -10,13 +10,13 @@ char *string_toupper(char *x)
 {
 	int a = 0;
 
-	while (x[i] != '\0')
+	while (x[a] != '\0')
 	{
-		if (x[i] >= 'a' && x[i] <= 'z')
+		if (x[a] >= 'a' && x[a] <= 'z')
 		{
-			x[i] = x[i] - 'a' + 'A';
+			x[a] = x[a] - 'a' + 'A';
 		}
-		i++;
+		a++;
 	}
 	return (x);
 }
