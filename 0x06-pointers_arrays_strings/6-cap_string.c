@@ -13,7 +13,7 @@ char *cap_string(char *s)
 
 	while (*(s + a))
 	{
-		if (*(s + a) >= 'a' && *(s + i) <= 'z')
+		if (*(s + a) >= 'a' && *(s + a) <= 'z')
 		{
 			if (a == 0)
 				*(s + a) -= 'a' - 'A';
@@ -26,7 +26,7 @@ char *cap_string(char *s)
 				}
 			}
 		}
-	a++
+	a++;
 	}
 return (s);
 }
