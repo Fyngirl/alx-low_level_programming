@@ -12,11 +12,11 @@ char *leet(char *s)
 	char c[] = "aAeEoOtTlL";
 	char d[] = "4433007711";
 
-	for (a = 0; *(s + a); a++)
+	for (a = 0; s[a] != '\0'; a++)
 	{
-		for (b = 0; b <= 9; a++)
+		for (b = 0; b < 10; a++)
 		{
-			if (c[b] == s[a])
+			if (s[a] == c[b])
 				s[a] = d[b];
 		}
 	}
