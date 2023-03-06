@@ -15,19 +15,17 @@ unsigned int _strspn(char *s, char *accept)
 
 	while (*s)
 	{
-		i = 0;
 
-		for (; *p; p++)
-			if (*s == *p)
+		for (i = 0; *p[i]; i++)
+		{
+			if (*s == *p[i])
 			{
-				i = 1;
+				len++;
 				break;
 			}
-	if (!i)
-	{
-		break;
-	}
-	len++;
+			else if (*P[i + 1] == '\0')
+				return (len);
+		}
 	s++;
 	}
 	return (len);
