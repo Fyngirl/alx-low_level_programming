@@ -5,7 +5,7 @@
  * main - prints an argument that multiplys
  * @argv: argument
  * @argc: argument count
- * Retrun: 1 if error and 0 if success
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
