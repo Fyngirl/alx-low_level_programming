@@ -1,5 +1,5 @@
-#ifndef _DOG_H_
-#define _DOG_H_
+#ifndef DOG
+#define DOG
 /**
  * struct dog - defines dog
  * @name: enter name of dog
@@ -22,4 +22,4 @@ dog_t *new_dog(char *name, float age, char *owner);
 
 void free_dog(dog_t *d);
 
-#endif /* _DOG_H_ */
+#endif /* DOG */
