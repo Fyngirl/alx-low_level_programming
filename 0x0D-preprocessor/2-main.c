@@ -7,6 +7,6 @@
 
 int main(void)
 {
-	printf("Name of file: %s\n", __FILE__);
+	printf("%s\n", __FILE__);
 	return (0);
 }
