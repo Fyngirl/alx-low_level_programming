@@ -1,17 +1,22 @@
-section .data ; defines a null-terminated string
-hello: db 'Hello, Holberton', 10, 0
+extern printf		; the C function, to be called
 
-section .text ; contains the entry point of the program
-global _start
-_start:
-	; write hello to stdout
-	mov eax, 4
-	mov ebx, 1
-	mov ecx, hello
-	mov edx, 15
-	int 0x80
+section .data		; Data section, initialized variables
+	msg: db "Hello, Holberton", 0	; C string needs 0
+	fmt: db "%s", 10, 0	; The printf format, "\n", '0'
 
-	; exit program with status code 0
-	mov eax, 1
-	xor ebx, ebx
-	int 0x80
+section .text		; Code section.
+
+global main		; the standard gcc entry point
+
+main:			; the program label for the entry point
+	push rbp		; set up stack frame, must be aligned
+
+	mov rdi, fmt
+	mov rsi, msg
+	mov rax, 0		; or can be xor rax, rax
+	call printf		; call C function
+
+	pop rbp		; restore stack
+
+	mov rax, 0		; normal, no error, return value
+	ret		; return
