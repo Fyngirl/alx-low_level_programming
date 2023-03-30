@@ -1,10 +1,15 @@
 #include <stdio.h>
 /**
- * __attribute__ - execute the function before the main function
- * Return: void
+ * startupfun - prints a message before the main function
+ *
  */
-void __attribute__((constructor)) before_main()
+void startupfun(void) __attribute__((constructor));
+
+/**
+ * startupfun - implementation of the startup function
+ */
+void startupfun(void)
 {
-	printf("You're beat! and yet, you must allow, \n");
-	printf("I bore my house upon my back!\n");
+	printf("You're beat! and yet, you allow, \n"
+			"I bore my house upon my back!\n");
 }
